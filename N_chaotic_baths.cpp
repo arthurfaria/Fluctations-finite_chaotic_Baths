@@ -48,7 +48,9 @@ void Evol_Temp(int N_bath, double Lambda, int N_cond, int N_iter, ofstream &arqu
 
         }
 
+	// quartic parameter 'a'
 	double A = 0.1;
+	
 	//double C_qq0;
 
         double E_part = 0.1968*(100);
