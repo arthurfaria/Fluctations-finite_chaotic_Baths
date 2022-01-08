@@ -49,7 +49,9 @@ void Evol_Temp(int N_bath, double Lambda, int N_cond, ofstream &arquivo){
       	double *E_i = (double *) calloc(N_cond, sizeof(double));
       	double *E_f = (double *) calloc(N_cond, sizeof(double));
 
-	double A = 0.1;
+	// quartic parameter 'a'
+	
+	double A = 0.1; 
 
 	double E_part = 0.1968*(100);
       	double E_bath = 0.01/(1000);
@@ -64,7 +66,7 @@ void Evol_Temp(int N_bath, double Lambda, int N_cond, ofstream &arquivo){
 
 	int tau_relax = 100000;     		// chaotic relaxation of bath
 	int tau = 500000; //200000; 		// thermalization system-bath
-	int tau_prot = 120000; //50000	// time of protocol
+	int tau_prot = 120000; //50000	  	// time of protocol
 
 	
 	// Sampling initial conditions for each heat bath mode.	
