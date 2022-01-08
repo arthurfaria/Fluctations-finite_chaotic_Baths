@@ -126,10 +126,10 @@ void Evol_Temp(int N_bath, double Lambda, int N_cond, int N_iter, ofstream &arqu
 	}
 
 	
+	// Picking up the 5th bath mode and testing whether it relaxes into chaotic behavior before coupling to the system
 	/* With the correlation function for the position of the bath mode it is possible to see if the bath is chaotic
 	(see ref: "https://iopscience.iop.org/article/10.1088/1751-8121/ab9a78/meta") */
 
-		// Picking up the 5th bath mode and testing whether it relaxes into chaotic behavior before coupling to the system
 
 	/*for(j = 0; j < N_cond; j++){
 		
@@ -152,12 +152,12 @@ void Evol_Temp(int N_bath, double Lambda, int N_cond, int N_iter, ofstream &arqu
 		arquivo << showpos << fixed << (i)*T_step << "    ";	
 		arquivo << showpos << scientific << C_qq0 << "\n" ;*/
 
+		
+
+		// Updating bath coordinates of each mode until it gets chaotic
 		/* We use fourth-order symplectic integration to integrate Hamilton's equations. See:
                  "https://www.sciencedirect.com/science/article/abs/pii/016727899090019L?via%3Dihub"*/	
        
-		
-		// Updating bath coordinates of each mode until it gets chaotic
-		
 		for(j = 0; j < N_cond; j++){
 
                 	for(l = 0; l < 4; l++){
@@ -276,10 +276,10 @@ int main(int argn, char **arg){
 
         // Picking parameters	
 
-    	int N_bath = atoi(arg[1]);
-        double Lambda = atof(arg[2]);
-        int N_cond = atoi(arg[3]);
-        int N_iter = atoi(arg[4]);
+    	int N_bath = atoi(arg[1]);  		// number of bath modes
+        double Lambda = atof(arg[2]);	// coupling constant 
+        int N_cond = atoi(arg[3]);    	// number of initial samples of the system
+        int N_iter = atoi(arg[4]);		// number of iterations between system and bath
 
         double Lambda1 = Lambda/sqrt(N_bath);
 
