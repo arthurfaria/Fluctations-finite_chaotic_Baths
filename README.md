@@ -1,4 +1,8 @@
-Repo description:
+# Thermalization due to a finite and chaotic bath:
+
+Code for the thermalization of a brownian particle due to a finite and chaotic bath
+
+## Repository content
 
 1. QO_poinc.cpp
  	- Poincarè sections for a quartic oscillator. Hamiltonian dynamics is performed by applying fourth-order symplectic integration, 
