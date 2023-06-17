@@ -1,6 +1,6 @@
 # Thermalization due to a finite and chaotic bath:
 
-`C/C++` implementation of thermalization and work fluctuation theorem for a Brownian particle interacting with a finite and chaotic bath.
+This is a software implementation in `C/C++` that focuses on the thermalization process and the Crooks fluctuation theorem for work. The implementation specifically considers the interaction of a Brownian particle with a bath that is both finite and chaotic.
 
 ## Repository content
 
