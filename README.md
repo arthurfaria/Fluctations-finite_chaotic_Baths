@@ -1,6 +1,6 @@
 # Thermalization due to a finite and chaotic bath:
 
-Code for the thermalization of a brownian particle due to a finite and chaotic bath in `C/C++`
+`C/C++` implementation of thermalization and work fluctuation theorem for a Brownian particle interacting with a finite and chaotic bath.
 
 ## Repository content
 
